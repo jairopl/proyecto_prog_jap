@@ -5,47 +5,34 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Registrar usuario</h1>
-<form action="insertar_usuario.php" method="post" id="nuevo_usuario">
-<div class="field">
-<label for="documento">Número documento</label>
-<input type="text" name="documento" id="documento" maxlength="15" required>
+<div class="content-wrapper">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="index.php">Inicio</a></li>
+    <li><a href="registrar_usuario.php">Usuarios sistema</a></li>
+    <li class="disabled"><a href="#">Propietarios</a></li>
+    <li class="disabled"><a href="#">Equipos</a></li>
+  </ul>
+  <div class="page-header"><h1>Sistema de control acceso</h1></div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+    <form action="" class="form">
+      <div class="form-group">
+        <div class="col-sm-7 col-sm-offset-2">
+          <input class="form-control input-lg" type="text" placeholder="Buscar un equipo">
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default">Buscar</button>
+      </div>
+    </form>
+    </div>  
+  </div>
 </div>
-
-<div class="field">
-<label for="tipo_documento">Tipo documento</label>
-<select id="tipo_documento" required>
-<option name="tipo_documento" value="0">Cedula de ciudadania</option>
-<option name="tipo_documento" value="1">Tarjeta de identidad</option>
-<option name="tipo_documento" value="2">Libreta militar</option>
-<option name="tipo_documento" value="3">Pasaporte</option>
-</select>
-</div>
-<div class="field">
-<label for="nombre">Nombres</label>
-<input type="text" name="nombre" id="nombre" required>
-</div>
-<div class="field">
-<label for="apellidos">Apellidos</label>
-<input type="text" name="apellidos" id="apellidos" required>
-</div>
-<div class="field">
-<label for="telefono">Telefono</label>
-<input type="text" name="telefono" id="telefono" required>
-</div>
-<div class="field">
-<label for="rol_usuario">Rol</label>
-<select id="rol_usuario" required>
-<option name="rol_usuario" value="0">Estudiante</option>
-<option name="rol_usuario" value="1">Docente</option>
-<option name="rol_usuario" value="2">Visitante</option>
-</select>
-</div>
-<button class="btn">Guardar
-</button>
-</form>
 </body>
 </html>
