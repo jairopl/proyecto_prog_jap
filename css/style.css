@@ -1,5 +1,4 @@
 body {
-  padding: 30px;
   background: #FAFAFA;
 }
 footer {
@@ -24,6 +23,9 @@ td, th {
   padding: 2px 5px;
 }
 
+.content-wrapper {
+  padding: 0 30px 10px;
+}
 .first {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 20px;

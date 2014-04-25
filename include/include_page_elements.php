@@ -11,9 +11,9 @@ function print_page_title($title) {
 function print_nav($active = 'index') {
   $links = array(
     'index' => 'index.php',
-    'registrar_usuario' => 'registrar_usuario.php',
     'registrar_propietario' => 'registrar_propietario.php',
     'equipos' => '#',
+    'registrar_usuario' => 'registrar_usuario.php',
   );
   $nombres_paginas = array(
     'index' => 'Inicio',
@@ -21,7 +21,21 @@ function print_nav($active = 'index') {
     'registrar_propietario' => 'Propietarios',
     'equipos' => 'Equipos',
   );
-  echo "<ul class='nav nav-tabs nav-justified'>";
+  echo '<div role="navigation" class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">Proyecto JAPL</span>
+        </div>
+        <div class="navbar-collapse collapse">
+';
+  echo "<ul class='nav navbar-nav'>";
+  //echo "<ul class='nav nav-tabs nav-justified'>";
   foreach ($links as $page => $link) {
     $class = '';
     if ($active == $page) {
@@ -31,7 +45,7 @@ function print_nav($active = 'index') {
     }
     echo "<li$class><a href='$link'>{$nombres_paginas[$page]}</a></li>";
   }
-  echo "</ul>";
+  echo "</ul></div></div></div>";
 }
 
 /** Hecho por JAPL. 24-04-2014 
