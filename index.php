@@ -1,24 +1,14 @@
 <html lang="es">
-<head>
-  <title>Proyecto JAPL</title>
-  <meta name="author" content="Jairo Alberto Prieto">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
-  <script src="js/bootstrap.min.js"></script>
-</head>
+<?php
+$pagina = "registro_propietario";
+require "include/include_page_elements.php";
+
+print_header(array('titulo' => 'Sistema de control de acceso'));
+?>
 <body>
 <div class="content-wrapper">
-  <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a href="index.php">Inicio</a></li>
-    <li><a href="registrar_usuario.php">Usuarios sistema</a></li>
-    <li class="disabled"><a href="#">Propietarios</a></li>
-    <li class="disabled"><a href="#">Equipos</a></li>
-  </ul>
-  <div class="page-header"><h1>Sistema de control acceso</h1></div>
+  <?php print_nav('index') ?>
+  <?php print_page_title('Sistema de control acceso') ?>
   <div class="panel panel-default">
     <div class="panel-body">
     <form action="" class="form">

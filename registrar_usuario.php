@@ -1,24 +1,14 @@
 <html lang="es">
-<head>
-  <title>Proyecto JAPL</title>
-  <meta name="author" content="Jairo Alberto Prieto">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
-  <script src="js/bootstrap.min.js"></script>
-</head>
+<?php
+$pagina = "registro_propietario";
+require "include/include_page_elements.php";
+
+print_header(array('titulo' => 'Registrar usuario del sistema'));
+?>
 <body>
 <div class="content-wrapper">
-<ul class="nav nav-tabs nav-justified">
-  <li><a href="index.php">Inicio</a></li>
-  <li class="active"><a href="registrar_usuario.php">Usuarios sistema</a></li>
-  <li class="disabled"><a href="#">Propietarios</a></li>
-  <li class="disabled"><a href="#">Equipos</a></li>
-</ul>
-<div class="page-header"><h1>Registrar usuario</h1></div>
+  <?php print_nav('registrar_usuario') ?>
+  <?php print_page_title('Registrar usuario') ?>
 <div class="panel panel-default">
   <div class="panel-body">
   <form action="insertar_usuario.php" method="post" id="nuevo_usuario" class="form-horizontal">
