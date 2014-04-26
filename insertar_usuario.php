@@ -7,11 +7,11 @@ $apellido = $_POST['apellidos'];
 $telefono = $_POST['telefono'];
 $rol = $_POST['rol'];
 
-$sql = "INSERT INTO visitante VALUES ('$doc', '$tipo_doc', '$nombre', '$apellido', '$telefono', '$rol')";
+$sql = "INSERT INTO usuario VALUES ('$doc', '$tipo_doc', '$nombre', '$apellido', '$telefono', '$rol')";
 $insertar = mysql_query($sql, $conexion);
 
 if ($insertar) {
-  echo "Se ha guardado el visitante satisfactoriamente";
+  echo "Se ha guardado el usuario satisfactoriamente";
 } else {
   echo "Se ha producido un error al guardar";
 }

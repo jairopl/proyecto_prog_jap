@@ -1,12 +1,12 @@
 <html lang="es">
 <?php
-$pagina = "registro_propietario";
+$pagina = "registro_visitante";
 require "include/include_page_elements.php";
 
 print_header(array('titulo' => 'Registrar usuario del sistema'));
 ?>
 <body>
-<?php print_nav('registrar_usuario') ?>
+<?php print_nav_bar('registrar_usuario') ?>
 <div class="content-wrapper">
   <?php print_page_title('Registrar usuario') ?>
   <div class="panel panel-default">
